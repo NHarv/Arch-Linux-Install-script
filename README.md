@@ -7,8 +7,11 @@ Neils Install Scrips instructions
 wifi-menu
 
 3, Download the script.
-
-git clone https://github.com/NHarv/Arch-Linux-Install-script
+pacman -Syy
+pacman -S git
+git clone https://github.com/NHarv/Arch-Linux-Install-script.git
+cd Arch-Linux-Install-script
+./archinstall.sh
 
 4, Run script, archinstall.sh
 

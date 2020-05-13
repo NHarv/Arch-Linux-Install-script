@@ -2,11 +2,13 @@ Neils Install Scrips instructions
 
 1, Boot from archiso.
 
-2. I fyou need to connect to WiFi, run this command.
+2, If you need to connect to WiFi, run this command.
 
 wifi-menu
 
-3, Copy archinstall.sh & archinstallaur.sh to root of archiso.
+3, Download the script.
+
+git clone https://github.com/NHarv/Arch-Linux-Install-script
 
 4, Run script, archinstall.sh
 

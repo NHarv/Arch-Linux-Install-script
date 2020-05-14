@@ -151,7 +151,7 @@ echo 127.0.0.1	localhost >> /mnt/etc/hosts
 echo ::1		localhost >> /mnt/etc/hosts
 echo 127.0.1.1	"${HOSTVAR}".localdomain	"${HOSTVAR}" >> /mnt/etc/hosts
 echo en_"${LOCALEVAR}".UTF-8 UTF-8 >> /mnt/etc/locale.gen
-locale-gen
+arch-chroot /mnt locale-gen
 echo LANG=en_"${LOCALEVAR}".UTF-8 >> /mnt/etc/locale.conf
 echo LC_COLLATE=C >> /mnt/etc/locale.conf
 export LANG=en_"${LOCALEVAR}".UTF-8

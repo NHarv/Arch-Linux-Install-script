@@ -1,4 +1,4 @@
-Neils Install Scrips instructions
+Neils Install Scripts instructions
 
 1, Boot from archiso.
 

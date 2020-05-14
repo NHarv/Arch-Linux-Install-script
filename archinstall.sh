@@ -106,7 +106,7 @@ echo
 echo "     Installing Base system..."
 echo
 sleep 3
-pacstrap /mnt base base-devel linux linux-firmware sysfsutils usbutils e2fsprogs dosfstools mtools inetutils netctl dhcpcd device-mapper cryptsetup nano less lvm2 dialog wpa_supplicant --noconfirm
+pacstrap /mnt base base-devel linux linux-firmware sysfsutils usbutils e2fsprogs dosfstools mtools inetutils netctl device-mapper cryptsetup nano less lvm2 dialog wpa_supplicant --noconfirm
 clear
 echo
 echo "     Generating fstab..."

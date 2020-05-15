@@ -13,13 +13,12 @@ wifi-menu
 ```
 pacman -Syy git
 git clone https://github.com/NHarv/Arch-Linux-Install-script.git
+```
+
+4, Run the script
+
+```
 cd Arch-Linux-Install-script
-./archinstall.sh
-```
-
-4, Run script, archinstall.sh
-
-```
 ./archinstall.sh
 ```
 

@@ -1,4 +1,4 @@
-Neils Install Scripts instructions
+Neil's Install Scripts instructions
 
 1, Boot from archiso.
 
@@ -11,15 +11,13 @@ wifi-menu
 3, Download the script.
 
 ```
-pacman -Syy git
-git clone https://github.com/NHarv/Arch-Linux-Install-script.git
+wget https://raw.githubusercontent.com/NHarv/Arch-Linux-Install-script/master/archinstall.sh
 ```
 
 4, Run the script
 
 ```
-cd Arch-Linux-Install-script
-./archinstall.sh
+bash archinstall.sh
 ```
 
 5, Partition the drive.
@@ -37,7 +35,7 @@ sdxx Home partition remainder of drive.
 Open terminal
 
 ```
-./archinstallaur.sh
+bash archinstallaur.sh
 ```
 
 

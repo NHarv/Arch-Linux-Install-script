@@ -277,6 +277,8 @@ while true; do
 done
 pacstrap /mnt pavucontrol-qt --noconfirm
 echo
+wget https://raw.githubusercontent.com/NHarv/Arch-Linux-Install-script/master/archinstallaur.sh
+echo
 cp archinstallaur.sh /mnt/home/"${USERVAR}"
 clear
 echo

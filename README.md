@@ -23,6 +23,7 @@ bash archinstall.sh
 5, Partition the drive.
 
 ```
+If UEFI use GPT if BIOS use DOS Partition table with no EFI partition.
 sdx1 EFI system partition 300M
 sdxx 2 x memory Swap Partition
 sdxx Root partition 20G

@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# This script was insired by EZNIX's  EZArch linux install guides.
+# https://www.youtube.com/channel/UCQrSHD-tv9nkssrD4nNGcMw/videos
 #   
 welcome () {
     clear

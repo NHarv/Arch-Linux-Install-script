@@ -11,7 +11,7 @@ wifi-menu
 3, Download the script.
 
 ```
-wget https://raw.githubusercontent.com/NHarv/Arch-Linux-Install-script/master/archinstall.sh
+wget https://tinyurl.com/yaqf9oqz
 ```
 
 4, Run the script

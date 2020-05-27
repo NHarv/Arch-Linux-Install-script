@@ -17,7 +17,7 @@ wget https://raw.githubusercontent.com/NHarv/Arch-Linux-Install-script/master/ar
 4, Run the script
 
 ```
-bash archinstall.sh
+./archinstall.sh
 ```
 
 5, Partition the drive.

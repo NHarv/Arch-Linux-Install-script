@@ -479,9 +479,10 @@ isntprint () {
 finish () {
     clear
     pacstrap /mnt pavucontrol-qt --noconfirm
-    echo
+    echo ""
     wget https://raw.githubusercontent.com/NHarv/Arch-Linux-Install-script/master/archinstallaur.sh
-    echo
+    chmod +x archinstallaur.sh
+    echo ""
     cp archinstallaur.sh /mnt/home/"${USERVAR}"
     clear
 

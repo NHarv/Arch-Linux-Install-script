@@ -136,12 +136,30 @@ homequest () {
     clear
     while true; do
         echo ""
-        read -r -p "Did you make a Home partition? If so do you want to format it? (yes/no): " ans;
+        read -r -p "Did you make a Home partition? (yes/no): " ans;
+        case $ans in
+            [yY][eE][sS]|[yY]* )
+                homequest2; break;;
+            [nN][oO]|[nN]* )
+                formatpart && mountpart; break;;
+            * ) 
+                echo "Please Answer Yes or No.";;
+        esac
+    done
+    clear
+}
+#
+#
+homequest2 () {
+    clear
+    while true; do
+        echo ""
+        read -r -p "Do you want to format it? (yes/no): " ans;
         case $ans in
             [yY][eE][sS]|[yY]* )
                 formatparth && mountparth; break;;
             [nN][oO]|[nN]* )
-                formatpart && mountpart; break;;
+                formatpart && mountparth; break;;
             * ) 
                 echo "Please Answer Yes or No.";;
         esac
@@ -154,12 +172,30 @@ homequestb () {
     clear
     while true; do
         echo ""
-        read -r -p "Did you make a Home partition? If so do you want to format it? (yes/no): " ans;
+        read -r -p "Did you make a Home partition? (yes/no): " ans;
+        case $ans in
+            [yY][eE][sS]|[yY]* )
+                homequestb2; break;;
+            [nN][oO]|[nN]* )
+                formatpartb && mountpartb; break;;
+            * ) 
+                echo "Please Answer Yes or No.";;
+        esac
+    done
+    clear
+}
+#
+#
+homequestb2 () {
+    clear
+    while true; do
+        echo ""
+        read -r -p "Do you want to format it? (yes/no): " ans;
         case $ans in
             [yY][eE][sS]|[yY]* )
                 formatparthb && mountparthb; break;;
             [nN][oO]|[nN]* )
-                formatpartb && mountpartb; break;;
+                formatpartb && mountparthb; break;;
             * ) 
                 echo "Please Answer Yes or No.";;
         esac

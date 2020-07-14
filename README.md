@@ -39,5 +39,19 @@ Open terminal
 bash archinstallaur.sh
 ```
 
-
 FINISHED
+
+Or Download the Live ISO from my Github page.
+
+1, Boot the live ISO
+
+2, Connect to the internet.
+
+3, Click the icon on the far right of the dock, scroll to the bin folder and select open in terminal.
+
+4, Run the script.
+
+```
+./nharvarch.sh
+```
+

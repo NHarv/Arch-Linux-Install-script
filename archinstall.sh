@@ -433,7 +433,7 @@ instgen () {
         read -r -p "Are you sure you want to Install General Software (y/n) " ans;
         case $ans in
             [yY][eE][sS]|[yY]* )
-                pacstrap /mnt --needed linux-headers dkms p7zip archiso haveged pacman-contrib pkgfile git diffutils jfsutils reiserfsprogs btrfs-progs f2fs-tools logrotate man-db man-pages mdadm perl s-nail texinfo which xfsprogs lsscsi sdparm sg3_utils smartmontools fuse2 fuse3 ntfs-3g exfat-utils gvfs gvfs-afc gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb unrar unzip unace xz xdg-user-dirs xscreensaver grsync ddrescue dd_rescue testdisk hdparm htop rsync hardinfo bash-completion geany lsb-release polkit ufw bleachbit packagekit gparted --noconfirm; break;;
+                pacstrap /mnt --needed linux-headers dkms p7zip archiso haveged pacman-contrib pkgfile git diffutils jfsutils reiserfsprogs btrfs-progs f2fs-tools logrotate man-db man-pages mdadm perl s-nail texinfo which xfsprogs lsscsi sdparm sg3_utils smartmontools fuse2 fuse3 ntfs-3g exfat-utils gvfs gvfs-afc gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb unrar unzip unace xz xdg-user-dirs xscreensaver grsync ddrescue dd_rescue testdisk hdparm htop rsync hardinfo bash-completion geany code lsb-release polkit ufw bleachbit packagekit gparted --noconfirm; break;;
             [nN][oO]|[nN]* )
                 break;;
             * ) 
@@ -467,7 +467,7 @@ instnet () {
         read -r -p "Are you sure you want to Install Networking Software (y/n) " ans;
         case $ans in
             [yY][eE][sS]|[yY]* )
-                pacstrap /mnt --needed b43-fwcutter broadcom-wl-dkms intel-ucode ipw2100-fw ipw2200-fw net-tools networkmanager networkmanager-openvpn nm-connection-editor network-manager-applet wget curl firefox thunderbird wireless_tools nfs-utils nilfs-utils dhclient dnsmasq dmraid dnsutils openvpn openssh openssl samba whois iwd filezilla avahi openresolv youtube-dl vsftpd --noconfirm && arch-chroot /mnt systemctl enable NetworkManager; break;;
+                pacstrap /mnt --needed b43-fwcutter broadcom-wl-dkms intel-ucode ipw2100-fw ipw2200-fw net-tools networkmanager networkmanager-openvpn nm-connection-editor network-manager-applet wget curl chromium thunderbird wireless_tools nfs-utils nilfs-utils dhclient dnsmasq dmraid dnsutils openvpn openssh openssl samba whois iwd filezilla avahi openresolv youtube-dl vsftpd --noconfirm && arch-chroot /mnt systemctl enable NetworkManager; break;;
             [nN][oO]|[nN]* )
                 break;;
             * ) 
@@ -551,6 +551,7 @@ instdesk () {
     echo "  7) Deepin"
     echo "  8) Budgie"
     echo "  9) LXDE"
+    echo "  10) Awesome WM"
     echo "  R) REBOOT into Base System"
     echo
     while true; do
@@ -574,6 +575,8 @@ instdesk () {
                     pacstrap /mnt budgie-desktop lightdm lightdm-gtk-greeter network-manager-applet gnome && DM=lightdm; break;;
                 [9]* )
                     pacstrap /mnt lxde lightdm lightdm-gtk-greeter xdg-user-dirs && DM=lightdm; break;;
+                [10]* )
+                    pacstrap /mnt awesome lightdm lightdm-gtk-greeter xdg-user-dirs nemo pavucontrol xarchiver gnome-packagekit bluez bluez-utils blueman steam terminator rofi picom i3lock xclip gnome-keyring materia-theme lxappearance xbacklight kde-spectacle network-manager-applet xfce4-power-manager yay pamac-gtk pamac-tray-appindicator-src && DM=lightdm; break;;
                 [Rr]* )
                     reboot; break;;
                     * )

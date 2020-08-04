@@ -551,7 +551,7 @@ instdesk () {
     echo "  7) Deepin"
     echo "  8) Budgie"
     echo "  9) LXDE"
-    echo "  10) Awesome WM"
+    echo "  A) Awesome WM"
     echo "  R) REBOOT into Base System"
     echo
     while true; do
@@ -575,7 +575,7 @@ instdesk () {
                     pacstrap /mnt budgie-desktop lightdm lightdm-gtk-greeter network-manager-applet gnome && DM=lightdm; break;;
                 [9]* )
                     pacstrap /mnt lxde lightdm lightdm-gtk-greeter xdg-user-dirs && DM=lightdm; break;;
-                [10]* )
+                [aA]* )
                     pacstrap /mnt awesome lightdm lightdm-gtk-greeter xdg-user-dirs nemo pavucontrol xarchiver gnome-packagekit bluez bluez-utils blueman steam terminator rofi picom i3lock xclip gnome-keyring materia-theme lxappearance xbacklight kde-spectacle network-manager-applet xfce4-power-manager yay pamac-gtk pamac-tray-appindicator-src && DM=lightdm; break;;
                 [Rr]* )
                     reboot; break;;

@@ -576,7 +576,7 @@ instdesk () {
                 [9]* )
                     pacstrap /mnt lxde lightdm lightdm-gtk-greeter xdg-user-dirs && DM=lightdm; break;;
                 [aA]* )
-                    pacstrap /mnt awesome lightdm lightdm-gtk-greeter xdg-user-dirs nemo pavucontrol xarchiver gnome-packagekit bluez bluez-utils blueman steam terminator rofi picom i3lock xclip gnome-keyring materia-theme lxappearance xbacklight kde-spectacle network-manager-applet xfce4-power-manager yay pamac-gtk pamac-tray-appindicator-src && DM=lightdm; break;;
+                    pacstrap /mnt awesome lightdm lightdm-gtk-greeter xdg-user-dirs nemo pavucontrol xarchiver gnome-packagekit bluez bluez-utils blueman steam terminator rofi picom i3lock xclip gnome-keyring materia-theme lxappearance xorg-xbacklight spectacle network-manager-applet xfce4-power-manager yay pamac-gtk pamac-tray-appindicator-src && DM=lightdm; break;;
                 [Rr]* )
                     reboot; break;;
                     * )

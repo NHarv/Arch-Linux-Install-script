@@ -599,7 +599,8 @@ do
     echo " 3) Networking"
     echo " 4) Fonts & Themes"
     echo " 5) Printing"
-    echo " 6) Finish install"
+    echo " 6) Install Xorg"
+    echo " 7) Finish install"
     echo ""
     read -p "please select the categories you want: " choice
     case $choice in
@@ -608,7 +609,8 @@ do
         3 ) instnet ;;
         4 ) instfonttheme ;;
         5 ) isntprint ;;
-        6 ) finish ; break ;;
+        6 ) instxorg ;;
+        7 ) finish ; break ;;
         * ) echo "Please make a valid choice:" ;;
     esac
 done

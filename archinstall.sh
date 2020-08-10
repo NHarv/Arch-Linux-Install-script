@@ -433,7 +433,7 @@ instgen () {
         read -r -p "Are you sure you want to Install General Software (y/n) " ans;
         case $ans in
             [yY][eE][sS]|[yY]* )
-                pacstrap /mnt --needed linux-headers dkms p7zip archiso haveged pacman-contrib pkgfile git diffutils jfsutils reiserfsprogs btrfs-progs f2fs-tools logrotate man-db man-pages mdadm perl s-nail texinfo which xfsprogs lsscsi sdparm sg3_utils smartmontools fuse2 fuse3 ntfs-3g exfat-utils gvfs gvfs-afc gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb unrar unzip unace xz xdg-user-dirs xscreensaver grsync ddrescue dd_rescue testdisk hdparm htop rsync hardinfo bash-completion geany code lsb-release polkit ufw bleachbit packagekit gparted --noconfirm; break;;
+                pacstrap /mnt --needed linux-headers dkms p7zip archiso haveged pacman-contrib pkgfile git diffutils jfsutils reiserfsprogs btrfs-progs f2fs-tools logrotate man-db man-pages mdadm perl s-nail texinfo which xfsprogs lsscsi sdparm sg3_utils smartmontools fuse2 fuse3 ntfs-3g exfat-utils gvfs gvfs-afc gvfs-goa gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb unrar unzip unace xz xdg-user-dirs xscreensaver grsync ddrescue dd_rescue testdisk hdparm htop rsync hardinfo bash-completion geany code lsb-release polkit ufw bleachbit packagekit gparted yay --noconfirm; break;;
             [nN][oO]|[nN]* )
                 break;;
             * ) 

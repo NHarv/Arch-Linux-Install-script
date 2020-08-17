@@ -467,7 +467,7 @@ instnet () {
         read -r -p "Are you sure you want to Install Networking Software (y/n) " ans;
         case $ans in
             [yY][eE][sS]|[yY]* )
-                pacstrap /mnt --needed b43-fwcutter broadcom-wl-dkms intel-ucode ipw2100-fw ipw2200-fw net-tools networkmanager networkmanager-openvpn nm-connection-editor network-manager-applet wget curl chromium thunderbird wireless_tools nfs-utils nilfs-utils dhclient dnsmasq dmraid dnsutils openvpn openssh openssl samba whois iwd filezilla avahi openresolv youtube-dl vsftpd --noconfirm && arch-chroot /mnt systemctl enable NetworkManager; break;;
+                pacstrap /mnt --needed b43-fwcutter broadcom-wl-dkms intel-ucode ipw2100-fw ipw2200-fw net-tools networkmanager networkmanager-openvpn nm-connection-editor network-manager-applet wget curl chromium thunderbird wireless_tools nfs-utils nilfs-utils dhclient dnsmasq dmraid dnsutils openvpn openssh openssl samba whois iwd filezilla avahi openresolv youtube-dl vsftpd iwd --noconfirm && arch-chroot /mnt systemctl enable NetworkManager; break;;
             [nN][oO]|[nN]* )
                 break;;
             * ) 

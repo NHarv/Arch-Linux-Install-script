@@ -5,7 +5,7 @@ Neil's Install Scripts instructions
 2, If you need to connect to WiFi, run this command.
 
 ```
-wifi-menu
+iwctl
 ```
 
 3, Download the script.
@@ -45,11 +45,7 @@ Or Download the Live ISO from my Github page.
 
 1, Boot the live ISO
 
-2, Connect to the internet.
-
-3, Click the icon on the far right of the dock, scroll to the bin folder and select open in terminal.
-
-4, Run the script.
+2, Run the script.
 
 ```
 ./nharvarch.sh

@@ -90,8 +90,6 @@ partpick () {
     echo ""
     read -p "               EFI Partition No?: " EFIVAR
     echo ""
-    read -p "              SWAP Partition No?: " SWAPVAR
-    echo ""
     read -p "            SYSTEM Partition No?: " SYSVAR
     echo ""
     read -p "  HOME Partition No if required?: " HOMEVAR
@@ -105,8 +103,6 @@ partpickb () {
     lsblk
     echo ""
     echo "        Please pick your Partitions:"
-    echo ""
-    read -p "              SWAP Partition No?: " SWAPVAR
     echo ""
     read -p "            SYSTEM Partition No?: " SYSVAR
     echo ""
@@ -212,8 +208,6 @@ formatparth () {
     mkfs.fat -F32 /dev/"${DRIVEVAR}""${EFIVAR}"
     mkfs.ext4 /dev/"${DRIVEVAR}""${SYSVAR}"
     mkfs.ext4 /dev/"${DRIVEVAR}""${HOMEVAR}"
-    mkswap /dev/"${DRIVEVAR}""${SWAPVAR}"
-    swapon /dev/"${DRIVEVAR}""${SWAPVAR}"
     clear
 }
 #
@@ -239,8 +233,6 @@ formatpart () {
     sleep 3
     mkfs.fat -F32 /dev/"${DRIVEVAR}""${EFIVAR}"
     mkfs.ext4 /dev/"${DRIVEVAR}""${SYSVAR}"
-    mkswap /dev/"${DRIVEVAR}""${SWAPVAR}"
-    swapon /dev/"${DRIVEVAR}""${SWAPVAR}"
     clear
 }
 #
@@ -264,8 +256,6 @@ formatparthb () {
     sleep 3
     mkfs.ext4 /dev/"${DRIVEVAR}""${SYSVAR}"
     mkfs.ext4 /dev/"${DRIVEVAR}""${HOMEVAR}"
-    mkswap /dev/"${DRIVEVAR}""${SWAPVAR}"
-    swapon /dev/"${DRIVEVAR}""${SWAPVAR}"
     clear
 }
 #
@@ -288,8 +278,6 @@ formatpartb () {
     echo "Formatting Partitions..."
     sleep 3
     mkfs.ext4 /dev/"${DRIVEVAR}""${SYSVAR}"
-    mkswap /dev/"${DRIVEVAR}""${SWAPVAR}"
-    swapon /dev/"${DRIVEVAR}""${SWAPVAR}"
     clear
 }
 #

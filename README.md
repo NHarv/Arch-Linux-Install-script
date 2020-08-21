@@ -20,12 +20,11 @@ wget https://raw.githubusercontent.com/NHarv/Arch-Linux-Install-script/master/ar
 ./archinstall.sh
 ```
 
-5, Partition the drive.
+5, Partition the drive or keep existing partitions.
 
 ```
 If UEFI use GPT if BIOS use DOS Partition table with no EFI partition.
 sdx1 EFI system partition 300M
-sdxx 2 x memory Swap Partition
 sdxx Root partition 20G
 sdxx Home partition remainder of drive.
 'x' being your drive letter & Partition Number

@@ -120,10 +120,8 @@ hostusrpass () {
     echo ""
     read -p "                       User Name?: " USERVAR
     echo ""
-    read -p "                   User Password?: " PASSVAR1
-    echo ""
-    read -p "Please enter your password again?: " PASSVAR2
-    [[ "${PASSVAR1}" == "${PASSVAR2}" ]] || ( echo "Passwords did not match"; exit 1; )
+    read -p "                   User Password?: " PASSVAR
+    echo "
     clear
 }
 #
@@ -341,7 +339,7 @@ setusrpriv () {
     sleep 3
     arch-chroot /mnt useradd -m -g users -G wheel,audio,video,storage,power,input,optical,sys,log,network,floppy,scanner,rfkill,lp,adm -s /bin/bash $USERVAR
     echo
-    arch-chroot /mnt echo ""${USERVAR}":"${PASSVAR1}"" | chpasswd --root /mnt
+    arch-chroot /mnt echo ""${USERVAR}":"${PASSVAR}"" | chpasswd --root /mnt
     arch-chroot /mnt echo "root:"${PASSVAR1}"" | chpasswd --root /mnt
     clear
     echo

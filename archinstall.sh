@@ -121,7 +121,7 @@ hostusrpass () {
     read -p "                       User Name?: " USERVAR
     echo ""
     read -p "                   User Password?: " PASSVAR
-    echo "
+    echo ""
     clear
 }
 #

@@ -35,6 +35,14 @@ welcomeb () {
 }
 #
 #
+handlerr () {
+clear
+set -uo pipefail
+trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
+clear
+}
+#
+#
 keyboard () {
     clear
     echo
@@ -337,7 +345,7 @@ setusrpriv () {
     echo ""
     echo "Adding User and setting up Sudo Priverlages..."
     sleep 3
-    arch-chroot /mnt useradd -m -g users -G wheel,audio,video,storage,power,input,optical,sys,log,network,floppy,scanner,rfkill,lp,adm -s /bin/bash "${USERVAR}"
+    arch-chroot /mnt useradd -mU -s /bin/bash -G sys,log,network,floppy,scanner,power,rfkill,users,video,storage,optical,lp,audio,wheel,adm "${USERVAR}"
     echo
     arch-chroot /mnt echo ""${USERVAR}":"${PASSVAR}"" | chpasswd --root /mnt
     arch-chroot /mnt echo "root:"${PASSVAR}"" | chpasswd --root /mnt
@@ -604,6 +612,7 @@ done
 #
 #
 if [ -d /sys/firmware/efi ]; then
+    handlerr
     welcome
     keyboard
     timedate
@@ -623,7 +632,8 @@ if [ -d /sys/firmware/efi ]; then
     instdesk
     enabserv
     instxorg
-else
+else    
+    handlerr
     welcomeb
     keyboard
     timedate

@@ -625,9 +625,9 @@ if [ -d /sys/firmware/efi ]; then
     instbase
     fstab
     setmirrors2
-    setusrpriv
     hostlocale
     bootload
+    setusrpriv
     softmenu
     instdesk
     enabserv
@@ -645,10 +645,9 @@ else
     setmirrors
     instbase
     fstab
-    setmirrors2
-    setusrpriv
     hostlocale
     bootloadb
+    setusrpriv
     softmenu
     instdesk
     enabserv

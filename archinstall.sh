@@ -345,7 +345,7 @@ setusrpriv () {
     echo ""
     echo "Adding User and setting up Sudo Priverlages..."
     sleep 3
-    arch-chroot /mnt useradd -mU -s /bin/bash -G sys,log,network,floppy,scanner,power,rfkill,users,video,storage,optical,lp,audio,wheel,adm "${USERVAR}"
+    arch-chroot /mnt useradd -m -G sys,log,network,floppy,scanner,power,rfkill,users,video,storage,optical,lp,audio,wheel,adm -s /bin/bash "${USERVAR}"
     echo
     arch-chroot /mnt echo ""${USERVAR}":"${PASSVAR}"" | chpasswd --root /mnt
     arch-chroot /mnt echo "root:"${PASSVAR}"" | chpasswd --root /mnt
